@@ -1,14 +1,14 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Warrior))]
-public class WarriorInput : MonoBehaviour {
+[RequireComponent(typeof(Character))]
+public class CharacterInput : MonoBehaviour {
 
     public Joystick input;
-    private Warrior character;
+    private Character character;
 
 	void Awake(){
-        character = GetComponent<Warrior>();
+        character = GetComponent<Character>();
 	}
 	
 	// Use this for initialization

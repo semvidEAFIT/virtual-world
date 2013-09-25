@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent (typeof(Motion))]
-public abstract class Warrior : MonoBehaviour, ICaster {
+public abstract class Character : MonoBehaviour {
 	
 	private Motion motion;
 	
@@ -21,13 +21,4 @@ public abstract class Warrior : MonoBehaviour, ICaster {
 	public void Move(float horizontal, float vertical){
 		motion.Move(horizontal, vertical);
 	}
-	
-	#region ICaster implementation
-	public GameObject GetGameObject ()
-	{
-		return this.gameObject;
-	}
-
-	public abstract void Execute (Spell spell);
-	#endregion
 }
