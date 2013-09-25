@@ -161,7 +161,7 @@ public class VirtualButtonEditor : Editor
     //// game object. The values are calculated from rectangle values (top-left
     //// and bottom-right corners).
     //// Returns false if Virtual Button is not child of an Image Target.
-    //public static bool SetPosAndScaleFromButtonArea(Vector2 topLeft,
+    //public static bool SetPosAndScaleFromButtonArea(Vector2 downLeft,
     //                                                Vector2 bottomRight,
     //                                                ImageTargetBehaviour it,
     //                                                VirtualButtonBehaviour vb)
@@ -173,10 +173,10 @@ public class VirtualButtonEditor : Editor
 
     //    float itScale = it.transform.lossyScale[0];
 
-    //    Vector2 pos = (topLeft + bottomRight) * 0.5f;
+    //    Vector2 pos = (downLeft + bottomRight) * 0.5f;
 
-    //    Vector2 scale = new Vector2(bottomRight[0] - topLeft[0],
-    //                                topLeft[1] - bottomRight[1]);
+    //    Vector2 scale = new Vector2(bottomRight[0] - downLeft[0],
+    //                                downLeft[1] - bottomRight[1]);
 
     //    Vector3 vbPosITSpace =
     //        new Vector3(pos[0] / itScale, VirtualButtonBehaviour.TARGET_OFFSET,

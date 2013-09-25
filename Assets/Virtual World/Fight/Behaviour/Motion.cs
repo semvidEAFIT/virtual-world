@@ -19,14 +19,16 @@ public class Motion : MonoBehaviour {
 	
 	void Update(){
 		if(target != null){
-			transform.LookAt(target);
+            Vector3 lookingPoint = target.position;
+            lookingPoint.y = transform.position.y;
+			transform.LookAt(lookingPoint);
 		}
 	}
 	
 	public void Move(float horizontal, float vertical){
 		if(target == null){
 			throw new System.Exception(this.name+" has no target");
-		} 
-		characterController.SimpleMove(new Vector3(horizontal*horSpeed, 0, vertical*vertSpeed));
+		}
+		characterController.SimpleMove(transform.forward*vertical*vertSpeed+ transform.right*horizontal*horSpeed);
 	}
 }
