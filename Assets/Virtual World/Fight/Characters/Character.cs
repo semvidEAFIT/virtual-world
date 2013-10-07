@@ -1,24 +1,15 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof(Motion))]
-public abstract class Character : MonoBehaviour {
-	
-	private Motion motion;
-	
-	void Awake(){
-		motion = GetComponent<Motion>();
-	}
-	
+public class Character : MonoBehaviour {
+
+	// Use this for initialization
 	void Start () {
 	
 	}
 	
+	// Update is called once per frame
 	void Update () {
 	
-	}
-	
-	public void Move(float horizontal, float vertical){
-		motion.Move(horizontal, vertical);
 	}
 }
